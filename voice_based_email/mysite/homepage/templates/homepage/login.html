@@ -8,10 +8,11 @@
 				
 			</div>
 		</nav>
-		<header class="masthead text-center text-white">
+		<header class=" text-center text-white">
 			<div class="masthead-content">
 				<div class="container">
-					<h1  style="margin-top:-60px; font-size:60px;color: black;" >LOGIN HERE</h1>
+					<br><br>
+					<h1  style="margin-top:-60px; font-size:60px;color: black;" >LOGIN</h1>
 					
 				<form action="homepage/login.html" method="POST">
 					<br><br><br><br>
@@ -28,6 +29,7 @@
 								</script>
 							
 							{% csrf_token %}
+							<br><br>
 							  <h3 style="color: black;text-align: left;margin-left: 10%;">Email:</h3>
 					
 							<input type="text" placeholder="Email" name="email"required value={{detail.email}} >
@@ -78,7 +80,7 @@
 			
 			<footer class="py-5 bg-black">
 				<div class="container">
-					<p class="text-center text-white m-0 small">Copyright&nbsp;© Voice Based Email&nbsp;</p>
+					<!-- <p class="text-center text-white m-0 small">Copyright&nbsp;© Voice Based Email&nbsp;</p> -->
 				</div>
 			</footer>
 

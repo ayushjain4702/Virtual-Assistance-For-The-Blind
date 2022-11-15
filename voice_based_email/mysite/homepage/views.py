@@ -27,7 +27,8 @@ body = ""
 s = smtplib.SMTP('smtp.gmail.com', 587)
 s.starttls()
 imap_url = 'imap.gmail.com'
-conn = imaplib.IMAP4_SSL(imap_url)
+# conn = imaplib.IMAP4_SSL(imap_url)
+conn = imaplib.IMAP4_SSL(imap_url,993)
 attachment_dir = 'C:/Users/Chacko/Desktop/'
 
 def texttospeech(text, filename):
@@ -142,16 +143,18 @@ def login_view(request):
         print(passwrd)
 
         imap_url = 'imap.gmail.com'
-        #passwrd = ''
-        #addr = ''
-        conn = imaplib.IMAP4_SSL(imap_url)
+        # passwrd = ''
+        # addr = ''
+        # conn = imaplib.IMAP4_SSL(imap_url)
+        conn = imaplib.IMAP4_SSL(imap_url,993)
         try:
             conn.login(addr, passwrd)
             s.login(addr, passwrd)
             texttospeech("Congratulations. You have logged in successfully. You will now be redirected to the menu page.", file + i)
             i = i + str(1)
             return JsonResponse({'result' : 'success'})
-        except:
+        except  Exception as e:
+            print(e)
             texttospeech("Invalid Login Details. Please try again.", file + i)
             i = i + str(1)
             return JsonResponse({'result': 'failure'})

@@ -15,3 +15,4 @@ class Compose:
     recipient : str
     subject : str
     body : str
+    
