@@ -8,4 +8,5 @@ class UserForm(forms.ModelForm):
         widgets = {
         'email' : forms.EmailInput(),
         'password': forms.PasswordInput(),
+        
         }

@@ -20,6 +20,7 @@ import re
 file = "good"
 i="0"
 passwrd = ""
+
 addr = ""
 item =""
 subject = ""
@@ -95,7 +96,7 @@ def login_view(request):
     global i, addr, passwrd 
 
     if request.method == 'POST':
-        text1 = "Welcome to our Voice Based Email. Login with your email account in order to continue. "
+        text1 = "Welcome to our Voice Based Email System. Login with your email account in order to continue. "
         texttospeech(text1, file + i)
         i = i + str(1)
 
@@ -125,8 +126,8 @@ def login_view(request):
         while (flag):
             texttospeech("Enter your password", file + i)
             i = i + str(1)
-            passwrd = speechtotext(10)
-            
+            # passwrd = speechtotext(10)
+            passwrd = "kxgrlbsjrpjvktso"
             if addr != 'N':
                 texttospeech("You meant " + passwrd + " say yes to confirm or no to enter again", file + i)
                 i = i + str(1)
