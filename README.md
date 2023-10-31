@@ -10,3 +10,7 @@ access their existing email account
 * gTTS
 * Playsound
 * Speech Recognition API
+
+## Research Paper Published
+![AyushJain_IEEE](https://github.com/ayushjain4702/Virtual-Assistance-For-The-Blind/assets/80087899/7444f464-f80a-45f8-8252-9800cb803b56)
+
